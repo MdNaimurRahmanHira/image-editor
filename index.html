@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="editor-wrapper">
+            <h2>Image editor</h2>
+            <hr>
+            <div class="aside-wrapper order-xl-1 order-2">
+                <aside class="left-aside disable pe-xl-4 p-0 order-xl-1 order-2">
+                    <h4>Filter</h4>
+                    <div class="filter-wrapper gap-3 d-flex justify-content-between flex-wrap">
+                        <button class="active filter-btn" id="brightness">Brightness</button>
+                        <button class="filter-btn" id="saturation">Saturation</button>
+                        <button class="filter-btn" id="inversion">Inversion</button>
+                        <button class="filter-btn" id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="d-flex align-items-center mt-4  justify-content-between">
+                        <h6 class="filter-name m-0">Brightness</h6>
+                        <p class="filter-value m-0">100%</p>
+                    </div>
+                    <input class="range w-100 my-3" value="100" min="0" max="200" type="range">
+
+                    <h4>Rotate & Flip</h4>
+                    <div class="d-flex rotate-btns justify-content-between my-3 gap-3 flex-wrap">
+                        <button id="left"><i class="fas fa-undo"></i></button>
+                        <button id="right"><i class="fas fa-redo"></i></button>
+                        <button id="horizontal">FlipX</button>
+                        <button id="verticle">FlipY</button>
+                    </div>
+                    <button class="reset-filters bg-danger mt-4 text-white" id="resetFilter">Reset Filters</button>
+                </aside>
+                <aside class="right-aside order-xl-2 order-1">
+                    <img id="previewImage" src="" alt="">
+                </aside>
+            </div>
+            <div class="bottom-part order-xl-2 order-1 my-4 d-flex justify-content-end">
+                <div class="d-flex justify-content-end">
+                    <button id="uploadImage" class="me-3">Upload Image <i class="fas fa-upload"></i></button>
+                    <input type="file" hidden id="hiddenInput" accept="image/*">
+                    <button class="bg-success disable text-white" id="saveImage">Save Image <i
+                            class="fas fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
